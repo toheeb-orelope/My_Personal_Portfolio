@@ -9,13 +9,13 @@ This is my personal website hoted on Netlify😍😍😍
 
 This website is a showcase of my work, interests, and projects. It's built using HTML, CSS, and JavaScript, and it's hosted on Netlify.
 
-## There is a link below to visit my website
+## There is a link below to my website
 
 My website [www.toheebahusain.com](https://www.toheebahusain.com)
 
 ## Contact
 
-Feel free to reach out if you have any questions or if you want to collaborate on a project. I welcome any kind of contribution. Also, I welcome any kind of contribution or suggestion about my website.
+Feel free to reach out if you have any questions or if you want to collaborate on a project. Also, I welcome any kind of contribution or suggestion about my website.
 
 - Email: toheeborelope@gmail.com
 - LinkedIn: [Toheeb A. Husain](https://www.linkedin.com/in/toheeb-ajala-husain-a9110b255/)
