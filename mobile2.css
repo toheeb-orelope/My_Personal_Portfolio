@@ -1,0 +1,36 @@
+body {
+    font-size: 0.9em;
+    padding: 0 0.8em;
+}
+
+.toheebImage img {
+    width: 5em;
+    height: 5em;
+}
+
+.pagesContainer {
+    font-size: 0.9em;
+    margin: 0.5em;
+}
+
+.skillsContent ul {
+    gap: 0.5rem;
+}
+
+.skillsContent li {
+    margin: 0.2em 0;
+}
+
+.contactList {
+    margin-right: 5vw;
+    gap: 0.8em;
+}
+
+
+.experience-item, .education-item {
+    flex-direction: column-reverse;
+}
+.institutionLogo {
+    align-self: center;
+    margin-bottom: 0.62em;
+}

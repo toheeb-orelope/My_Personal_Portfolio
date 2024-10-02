@@ -1,0 +1,123 @@
+body {
+    padding: 0 1em;
+    max-width: 70%;
+    font-size: 1em;
+
+}
+
+.landingPage {
+    min-height: auto;
+    padding: 0 0;
+}
+.toheebImage img{
+    width: 7em;
+    height: 7em;
+    margin-top: 1.5em;
+}
+
+.institutionLogo {
+    width: 2.75em;
+    height: 2.75em;
+    flex-shrink: 0;
+    margin-top: 5px;
+    align-self: flex-end;
+  }
+.pagesContainer{
+    display: none;
+    /* font-size: 18px; */
+    font-size: 1em;
+    margin: 1em;
+
+}
+.cvButton {
+    font-size: 0.75em;
+    padding: 0.2em 0.6em;
+}
+
+.contactList{
+    display: flex;
+    gap: 1em;
+    margin-bottom: 2em;
+    margin-right: 25vw;
+  }
+  
+  .cvButton{
+    padding: 0.2rem 0.8rem;
+    border-radius: 1rem;
+    font-size: 0.6em;
+    gap: 0.5em;
+  }
+  
+  .cvButton .fa-circle-down{
+    width: 0.7em;
+    height: 0.7em;
+    margin-right: 5px;
+  }
+  .changeSize {
+    font-size: 1em;
+}
+
+.pagesContainer a {
+    margin: 0 5px;
+}
+
+.hr {
+    display: none;
+}
+.aboutMeCollapse{
+    display: none;
+    }
+
+.interestsCollapse {
+    display: none;
+}
+
+.interestsFullDetails {
+    display: block;
+}
+.interestsCollapse {
+    display: block;
+    max-height: 300em;
+}
+
+.final-paragraph-full {
+    display: none;
+}
+.final-paragraph-condensed {
+    display: block;
+}
+
+.projectDetailes {
+    display: none;
+}
+.projectCollapse {
+    display: block;
+}
+
+.contactDetails {
+    flex-direction: column;
+    align-items: center;
+}
+
+.contactDetails {
+    margin-bottom: 20px;
+}
+
+.interests-section {
+    border-left: none;
+    padding-left: 0;
+}
+
+
+.education-item {
+    flex-direction: column;
+}
+
+
+.links-container {
+    display: none;
+}
+.mobile-menu-icon {
+    display: block;
+}
+
