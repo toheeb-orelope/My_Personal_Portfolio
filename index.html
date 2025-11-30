@@ -31,6 +31,11 @@
             <a href="#aboutMe">About me</a><span class="divider">|</span>
             <a href="#projects">Projects</a><span class="divider">|</span>
             <a href="#skills">Skills</a><span class="divider">|</span>
+            <a href="#certifications">Certifications</a><span class="divider">|</span>
+            <a href="#experience">Experience</a><span class="divider">|</span>
+            <a href="#education">Education</a><span class="divider">|</span>
+            <a href="#awards">Awards</a><span class="divider">|</span>
+            <a href="#volunteering">Volunteering</a><span class="divider">|</span>
             <a href="#contact">Contact</a><span class="divider">|</span>
             <a href="#blog">Blog</a>
         </div>
@@ -38,6 +43,29 @@
     <hr>
 
     <h2 id="aboutMe">About me</h2>
+    <div class="detailsAbout currentAbout">
+        <p>Hi, I'm Toheeb, a BSc Computer Science student at the University of Northampton (First Class expected 2026) focused on cybersecurity, AI safety, and secure backend engineering.</p>
+        <p>I build resilient, explainable systems—from AI-powered sensory support tools to financial APIs with real-time messaging—and I love turning complex ideas into practical, secure products.</p>
+    </div>
+
+    <div class="aboutMeCollapse currentAbout">
+        <p>
+            Cybersecurity-focused Computer Science student (First Class expected, 2026) with hands-on Spring/REST, Kafka, AI/IoT integrations, and threat intel experience.
+        </p>
+    </div>
+
+    <div class="detailsAbout">
+        <p>Hi, I'm Toheeb, a BSc Computer Science student at the University of Northampton (expected First Class, 2026) focused on cybersecurity, AI safety, and secure backend engineering. I build systems that are both resilient and explainable—from AI-powered sensory support tools to financial APIs with real-time messaging.</p>
+        <p>Recent highlights include leading a 2nd-place Elevate Great AI Competition team, completing the J.P. Morgan Software Engineering Virtual Experience (Spring, REST APIs, Kafka, H2/JPA), and shipping hands-on projects with Spring Boot, Angular, Oracle SQL, and AI/IoT integrations. I learn fast, document clearly, and enjoy making complex systems practical.</p>
+    </div>
+
+    <div class="aboutMeCollapse">
+        <p>
+            Cybersecurity-focused Computer Science student (First Class expected, 2026) with hands-on Spring/REST, Kafka, AI/IoT integrations, and threat intel experience.
+        </p>
+    </div>
+
+    <!-- Legacy about block (hidden)
     <div class="detailsAbout">
         <p>Hi, I'm Toheeb, a second-year Computer Science student at the University of Northampton. While I've always had a deep interest in technology, it wasn’t until I discovered the world of cybersecurity that my true passion took shape. The challenge of protecting data against ever-evolving cyber threats excites me, as it combines both creativity and critical thinking. I’m fascinated by how securing digital systems can reshape our world, safeguard privacy, and drive efficiency in every industry. I’m eager to continue growing in this field, exploring innovative ways to build a safer, more secure digital future.</p>
         <p>When I'm not deep into cybersecurity or coding my latest projects, I’m exploring mini projects in iOS development. There's something thrilling about watching code come to life—those real-world implementations that bring everything together, making all the effort and complexity of programming feel worthwhile.</p>
@@ -48,6 +76,8 @@
             I'm Toheeb, a second-year Computer Science student at the University of Northampton. Passionate about the potential of cybersecurity to protect and reshape our world, I am constantly exploring its applications through both academic courses and hands-on experiments.
         </p>
     </div>
+
+    -->
 
     <div class="interestsDetail">
         <strong class="interestsHeader">What really gets me excited</strong>
@@ -85,6 +115,63 @@
         <summary>Collapsible</summary>
         <p>The headers of this project are collapsible. Hover on the header and click to view more details!!!</p>
     </details>
+    <ul class="expandableList">
+        <li>
+            <strong class="expandableHeader">J.P. Morgan Software Engineering Virtual Experience</strong>
+            <span class="shortDescription">Built Spring Boot REST APIs with Kafka messaging and H2/JPA for Midas Core incentive and balance operations.</span>
+            <div class="expandableContent">
+                <div class="projectDetails">
+                    <ul>
+                        <li>Developed and tested REST API endpoints (GET/POST) supporting incentive and balance workflows with secure data validation.</li>
+                        <li>Integrated Apache Kafka message queuing to process and persist transaction data in real time.</li>
+                        <li>Implemented H2 in-memory database plus Spring Data JPA repositories for consistent data access.</li>
+                        <li>Applied dependency injection, debugging, and transaction management to keep services reliable.</li>
+                        <li>Simulated financial backend operations used at J.P. Morgan Chase &amp; Co.</li>
+                    </ul>
+                </div>
+            </div>
+        </li>
+        <li>
+            <strong class="expandableHeader">SensoryNeural – AI-Powered Sensory Support System (Team Lead / Co-Creator)</strong>
+            <span class="shortDescription">2nd Place, Elevate Great AI Competition (London, £2,500) with AI + IoT sensory-safe environments.</span>
+            <div class="expandableContent">
+                <div class="projectDetails">
+                    <ul>
+                        <li>Architected an ethical AI framework with explainable dashboards for caregiver transparency.</li>
+                        <li>Built privacy-by-design data anonymization aligned with GDPR and the EU AI Act from the first design pass.</li>
+                        <li>Engineered a real-time IoT hub that modulates lighting and noise-cancellation based on AI-predicted stress triggers.</li>
+                    </ul>
+                </div>
+            </div>
+        </li>
+        <li>
+            <strong class="expandableHeader">Personal Financial Management</strong>
+            <span class="shortDescription">Full-stack Spring Boot API with Angular dashboard and MySQL storage.</span>
+            <div class="expandableContent">
+                <div class="projectDetails">
+                    <ul>
+                        <li>Implemented secure CRUD endpoints for financial data with Spring Boot and MySQL.</li>
+                        <li>Built an Angular dashboard with dynamic charts/graphs for real-time spending insights.</li>
+                        <li>Designed RESTful resource structure and data validation for reliable user flows.</li>
+                    </ul>
+                </div>
+            </div>
+        </li>
+        <li>
+            <strong class="expandableHeader">Database Management System</strong>
+            <span class="shortDescription">Oracle SQL database for a school system with optimized schema design.</span>
+            <div class="expandableContent">
+                <div class="projectDetails">
+                    <ul>
+                        <li>Used ER modelling to optimize schema and improve retrieval efficiency by ~30%.</li>
+                        <li>Authored stored queries and constraints for better organization and data integrity.</li>
+                    </ul>
+                </div>
+            </div>
+        </li>
+    </ul>
+
+    <!-- Legacy projects (hidden)
     <ul class="expandableList">
         <li>
             <strong class="expandableHeader">Claybrooks Zoo - Software Engineering Projects</strong>
@@ -182,22 +269,93 @@
             </div>
         </li>
     </ul>
+    -->
 
     <h2 id="skills">Skills</h2>
     <div class="skillsContent">
-    <ul>
-        <li>C++</li>
-        <li>JavaScript</li>
-        <li>HTML & CSS</li>
-        <li>Python</li>
-        <li>Swift & SwiftUI</li>
-        <li>Java</li>
-        <li>PHP, MYSQL</li>
-        <li>SQL</li>
-    </ul>
+        <div class="skillsGrid">
+            <div class="skillCard">
+                <strong>Programming Languages</strong>
+                <ul>
+                    <li>Python, Java, JavaScript, C++, PHP, SQL, HTML5, CSS3</li>
+                </ul>
+            </div>
+            <div class="skillCard">
+                <strong>Frameworks &amp; Libraries</strong>
+                <ul>
+                    <li>React, Next.js, FastAPI, Spring Boot</li>
+                </ul>
+            </div>
+            <div class="skillCard">
+                <strong>Tools &amp; Platforms</strong>
+                <ul>
+                    <li>Docker, Git, AWS, Azure</li>
+                </ul>
+            </div>
+            <div class="skillCard">
+                <strong>Databases</strong>
+                <ul>
+                    <li>MySQL, Oracle SQL</li>
+                </ul>
+            </div>
+            <div class="skillCard">
+                <strong>Concepts &amp; Methods</strong>
+                <ul>
+                    <li>RESTful API design, OOP, Agile/Scrum, System Design, CI/CD</li>
+                </ul>
+            </div>
+            <div class="skillCard">
+                <strong>Soft Skills</strong>
+                <ul>
+                    <li>Project management, technical leadership, analytical problem-solving, communication, continuous learning</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <h2 id="certifications">Certifications</h2>
+    <div class="skillsContent">
+        <ul>
+            <li>CompTIA A+</li>
+            <li>Microsoft Certified: Azure AI Fundamentals</li>
+            <li>arcX: Foundation Level Threat Intelligence Analyst</li>
+            <li>Make Foundation</li>
+        </ul>
     </div>
 
     
+    <hr>
+
+    <h2 id="experience">Experience</h2>
+    <ul class="expandableList">
+        <li>
+            <strong class="expandableHeader">Cyber Threat Intelligence Analyst Intern – CSFI</strong>
+            <span class="shortDescription">Cyber Security Forum Initiative (July 2025 – August 2025)</span>
+            <div class="expandableContent">
+                <div class="projectDetails">
+                    <ul>
+                        <li>Delivered actionable intelligence mapped to MITRE ATT&amp;CK, D3FEND, and the Cyber Kill Chain.</li>
+                        <li>Conducted OSINT-based threat hunting to identify IOCs and emerging trends; enriched threat feeds with sandbox analysis.</li>
+                        <li>Collaborated on RFIs and presented findings to stakeholders.</li>
+                        <li>Analysed 50+ phishing domains and mapped TTPs to MITRE ATT&amp;CK.</li>
+                    </ul>
+                </div>
+            </div>
+        </li>
+        <li>
+            <strong class="expandableHeader">Mail Sorter – Angard Staffing (Royal Mail) Midland Super Hub</strong>
+            <span class="shortDescription">Northampton (Sep 2023 – Present)</span>
+            <div class="expandableContent">
+                <div class="projectDetails">
+                    <ul>
+                        <li>Recorded and analysed truck flow statistics to optimise logistics and operational efficiency.</li>
+                        <li>Coordinated team activities and fostered a collaborative, productive environment.</li>
+                    </ul>
+                </div>
+            </div>
+        </li>
+    </ul>
+
     <hr>
 
     <h2 id="education">Education</h2>
@@ -207,14 +365,15 @@
                 <strong class="expandableHeader">Bachelor's in Computer Science (Expected Graduation Year 2026)</strong>
                 <span class="shortDescription">University of Northampton, Northampton, United Kingdom</span>
                 <div class="expandableContent">
-                    <p>Year 1 modules and grades:</p>
+                    <p>BSc Computer Science (Expected First Class, 2026). Relevant modules:</p>
                     <ul>
-                        <li>Problem Solving and Programming: B+</li>
-                        <li>Software Engineering Fundamentals: A</li>
-                        <li>Computer Systems: A</li>
-                        <li>Mathematics for Computer Science: B</li>
-                        <li>Computer Communications: A-</li>
-                        <li>Web Development: A+</li>
+                        <li>Data Structures and Algorithms</li>
+                        <li>Modern Databases</li>
+                        <li>Web Development</li>
+                        <li>Operating Systems</li>
+                        <li>Computer Networking</li>
+                        <li>Mobile Application Development</li>
+                        <li>Advanced AI and Applications</li>
                     </ul>
                 </div>
             </div>
@@ -222,6 +381,58 @@
                 <a href="https://www.northampton.ac.uk/" target="_blank">
                     <img src="imgs/NorthamptonUNI.jpg" alt="University of Northampton Logo">
                 </a>
+            </div>
+        </li>
+    </ul>
+    <hr>
+
+    <h2 id="awards">Awards &amp; Honors</h2>
+    <ul class="expandableList">
+        <li>
+            <strong class="expandableHeader">Daria-Romana Pop Award</strong>
+            <span class="shortDescription">Best Intern Award, Cyber Security Forum Initiative (CSFI)</span>
+            <div class="expandableContent">
+                <div class="projectDetails">
+                    <p>Recognised for standout impact during the CSFI internship cohort, delivering actionable CTI outputs.</p>
+                </div>
+            </div>
+        </li>
+        <li>
+            <strong class="expandableHeader">Self-financed University Education</strong>
+            <span class="shortDescription">Demonstrated resilience balancing work, study, and high performance</span>
+            <div class="expandableContent">
+                <div class="projectDetails">
+                    <p>Funded studies while maintaining strong academic results, showing discipline, ownership, and time management.</p>
+                </div>
+            </div>
+        </li>
+    </ul>
+
+    <h2 id="volunteering">Volunteering</h2>
+    <ul class="expandableList">
+        <li>
+            <strong class="expandableHeader">Assistant Team Lead – CSFI</strong>
+            <span class="shortDescription">Cyber Security Forum Initiative (Sep 2025 – Present)</span>
+            <div class="expandableContent">
+                <div class="projectDetails">
+                    <ul>
+                        <li>Supports coordination of CTI tasks and mentors interns.</li>
+                        <li>Assists with project planning and reviewing threat analysis reports.</li>
+                        <li>Continues contributing to CSFI’s mission on a volunteer basis.</li>
+                    </ul>
+                </div>
+            </div>
+        </li>
+        <li>
+            <strong class="expandableHeader">AI Society Volunteer – University of Northampton</strong>
+            <span class="shortDescription">Sep 2023 – Present</span>
+            <div class="expandableContent">
+                <div class="projectDetails">
+                    <ul>
+                        <li>Contributed to workshops on AI trends and ML projects.</li>
+                        <li>Co-led a Discord channel curating AI opportunities, boosting member engagement.</li>
+                    </ul>
+                </div>
             </div>
         </li>
     </ul>
@@ -254,7 +465,7 @@
         <a href="mailto:toheeborelope@gmail.com" target="_blank"><i
                 class="fa-regular fa-envelope changeSize"></i></a>
         </ul>
-                <a href="TOHEEB_A_HUSAIN_CV.docx" download class="cvButton">
+                <a href="TOHEEB_HUSAIN_CV_2025.pdf" download class="cvButton">
                     <i class="fa-sharp fa-solid fa-circle-down"></i>
                     <span>Download CV</span>
                 </a>

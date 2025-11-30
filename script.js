@@ -173,3 +173,29 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     scrollToElement(this.getAttribute("href"), 1000);
   });
 });
+
+// Normalize about text to keep encoding clean
+document.addEventListener("DOMContentLoaded", () => {
+  const aboutParas = document.querySelectorAll(".currentAbout p");
+  if (aboutParas.length >= 2) {
+    aboutParas[0].textContent =
+      "Hi, I'm Toheeb, a BSc Computer Science student at the University of Northampton (First Class expected 2026) focused on cybersecurity, AI safety, and secure backend engineering.";
+    aboutParas[1].textContent =
+      "I build resilient, explainable systems - from AI-powered sensory support tools to financial APIs with real-time messaging - and I love turning complex ideas into practical, secure products. Recent highlights: 2nd-place Elevate Great AI Competition and the J.P. Morgan Software Engineering Virtual Experience.";
+  }
+
+  const blogList = document.querySelector(".blogList");
+  if (blogList) {
+    blogList.innerHTML =
+      '<li><a href="https://www.linkedin.com/in/toheeb-ajala-husain-a9110b255/recent-activity/all/" target="_blank">LinkedIn updates and articles</a></li>';
+  }
+
+  // Normalize dashes/apostrophes to avoid encoding artifacts
+  document.querySelectorAll("body *").forEach((el) => {
+    if (el.childNodes.length === 1 && el.childNodes[0].nodeType === 3) {
+      el.textContent = el.textContent
+        .replace(/[–—]/g, "-")
+        .replace(/’/g, "'");
+    }
+  });
+});
