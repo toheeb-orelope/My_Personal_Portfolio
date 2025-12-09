@@ -35,6 +35,7 @@
             <a href="#experience">Experience</a><span class="divider">|</span>
             <a href="#education">Education</a><span class="divider">|</span>
             <a href="#awards">Awards</a><span class="divider">|</span>
+            <a href="#opensource">Open-source</a><span class="divider">|</span>
             <a href="#volunteering">Volunteering</a><span class="divider">|</span>
             <a href="#contact">Contact</a><span class="divider">|</span>
             <a href="#blog">Blog</a>
@@ -403,6 +404,25 @@
             <div class="expandableContent">
                 <div class="projectDetails">
                     <p>Funded studies while maintaining strong academic results, showing discipline, ownership, and time management.</p>
+                </div>
+            </div>
+        </li>
+    </ul>
+
+    <h2 id="opensource">Open-source Contributions</h2>
+    <ul class="expandableList">
+        <li>
+            <strong class="expandableHeader">SigmaHQ Contribution</strong>
+            <span class="shortDescription">Improved DNS exfiltration detection by tightening Invoke-DNSExfiltrator rule parameters.</span>
+            <div class="expandableContent">
+                <div class="projectDetails">
+                    <p>Improved the SigmaHQ DNS exfiltration rule by requiring the mandatory Invoke-DNSExfiltrator arguments (-i, -d, -p), closing gaps that could miss real-world activity.</p>
+                    <ul>
+                        <li>Analyzed the tool source, rebuilt detection logic, and aligned with Sigma naming/conventions.</li>
+                        <li>Simulated attack scenarios, tested locally, and validated with <code>sigma check</code>.</li>
+                    </ul>
+                    <p><a href="https://github.com/SigmaHQ/sigma/pull/5801" target="_blank">Pull Request #5801 – Improved DNS Exfiltration Detection Logic</a></p>
+                    <p>This contribution strengthens SOC and detection teams by improving coverage for covert DNS exfiltration techniques.</p>
                 </div>
             </div>
         </li>
