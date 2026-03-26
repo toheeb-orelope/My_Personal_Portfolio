@@ -389,9 +389,23 @@ display: none;
 }
 
 .expandableContent.expanded {
-  max-height: 130em; /* Increased to accommodate larger content */
+  max-height: 260em; /* Increased to accommodate larger content */
   opacity: 1;
   padding: 0.6em;
+}
+
+.projectDiagram {
+  margin: 0.9em 0;
+}
+
+.projectDiagram img {
+  display: block;
+  width: 100%;
+  max-width: 44em;
+  height: auto;
+  border-radius: 0.5em;
+  border: 1px solid #d3d3d3;
+  box-shadow: 0 0.3em 1em hsla(0, 0%, 0%, 0.08);
 }
 
 .projectDetailsButton{

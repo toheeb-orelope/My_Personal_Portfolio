@@ -94,6 +94,10 @@ body {
     display: block;
 }
 
+.projectDiagram img {
+    max-width: 100%;
+}
+
 .contactDetails {
     flex-direction: column;
     align-items: center;

@@ -118,6 +118,63 @@
     </details>
     <ul class="expandableList">
         <li>
+            <strong class="expandableHeader">Implementing Scalable Azure IAM and RBAC for CloudScale Logistics</strong>
+            <span class="shortDescription">Built a group-based Azure IAM/RBAC model that enforced least privilege, removed permission creep, and cut admin onboarding to under five minutes.</span>
+            <div class="expandableContent">
+                <div class="projectDetails">
+                    <p><strong>Role:</strong> Cloud Security Analyst Intern - Amdari.io<br>
+                    <strong>Domain:</strong> Cloud Security, Identity &amp; Access Management (IAM), Cloud Governance<br>
+                    <strong>Duration:</strong> 07, March 2026 - 27, March 2026</p>
+                    <p><strong>Tech stack &amp; tools:</strong> Microsoft Azure (Subscriptions, Resource Groups, Virtual Machines), Microsoft Entra ID (Azure AD), Azure RBAC, Azure Portal (GUI), Microsoft Graph PowerShell module, Azure CLI, Microsoft Authenticator.</p>
+
+                    <p><strong>Project overview:</strong> CloudScale Logistics is a mid-sized global shipping and supply chain provider rapidly expanding its workloads into a multi-subscription Azure environment. As the environment grew, the team relied on manual, user-level permission assignments, which led to permission creep, an unnecessarily large attack surface, and growing compliance risk. As a Cloud Security Analyst Intern at Amdari.io, I designed and implemented a group-based RBAC model in Microsoft Entra ID and Azure to enforce least privilege, establish a zero-trust, need-to-know baseline, and create a repeatable identity and access pattern.</p>
+
+                    <p><strong>Context and problem:</strong> The IT team lacked a standardized access hierarchy across Azure subscriptions, and permissions were granted directly to individual user accounts on resources. Over time, this created a situation where many users, including Service Desk personnel, accumulated high-privilege roles such as Owner that exceeded their daily operational duties. This model made it difficult to answer basic security and compliance questions such as who has what access and why, increased the blast radius of any single compromised account, and made onboarding new administrators slow and manual.</p>
+
+                    <p><strong>Objectives:</strong></p>
+                    <ul>
+                        <li>Eliminate direct user-to-resource role assignments and move to a group-based RBAC model in Microsoft Entra ID.</li>
+                        <li>Establish a zero-trust, need-to-know baseline where identities can authenticate but have no default access to Azure resources.</li>
+                        <li>Design a tiered administrative model for Senior Admin, Junior Admin, and Service Desk roles mapped to Azure RBAC roles: Owner, Contributor, and Reader.</li>
+                        <li>Ensure access can be managed consistently through Azure Portal, Microsoft Graph PowerShell, and Azure CLI.</li>
+                        <li>Reduce administrator onboarding time from several hours of manual assignments to a single group membership change.</li>
+                        <li>Improve audit readiness and support cleaner access reviews for standards such as SOC 2 and ISO 27001.</li>
+                    </ul>
+
+                    <p><strong>Architecture and access design:</strong> To isolate the proof-of-concept and enforce regional data residency, I created a dedicated resource group named <code>CloudScale-Logistics-RG</code> in the East US region. This resource group served as the management boundary for deploying test resources and validating role behavior without impacting production workloads. I then designed a three-tier administrative structure that mapped Microsoft Entra ID security groups to Azure RBAC roles at clearly defined scopes: Senior Admins to Owner at subscription scope, Junior Admins to Contributor at resource-group scope, and Service Desk to Reader at resource-group scope. All access was assigned to groups instead of individual users, removing direct user-to-resource assignments and enforcing least privilege.</p>
+
+                    <p><strong>Implementation:</strong></p>
+                    <ul>
+                        <li>Used Azure Portal to manually create the initial Senior Admin identity, representing the highest administrative tier and following governance-friendly naming and profile practices.</li>
+                        <li>Used Microsoft Graph PowerShell to automate Junior Admin provisioning by installing the Graph module, connecting with the required scopes, creating user accounts and the Junior Admins security group, and adding users to the group with commands such as <code>Connect-MgGraph</code>, <code>New-MgUser</code>, <code>New-MgGroup</code>, and <code>New-MgGroupMember</code>.</li>
+                        <li>Used Azure CLI to provision Service Desk identities, create the Service Desk group, add members, and support broader role-assignment and resource-management workflows.</li>
+                        <li>Audited existing role assignments with Azure CLI to identify direct user permissions and excessive Owner access, including Service Desk users holding privileges beyond their responsibilities.</li>
+                        <li>Migrated access from direct user assignments to group-based RBAC and verified effective assignments using Azure CLI role-assignment queries.</li>
+                    </ul>
+
+                    <p><strong>Validating zero-trust and least privilege:</strong> I tested both authentication and authorization across all three tiers. All users were confirmed in the tenant and validated for sign-in and MFA registration using Microsoft Authenticator. After deploying a test virtual machine, I confirmed that Owner users could create, modify, and delete resources, Contributor users could manage resources but not assign roles or change access control, and Reader users could view resources and properties but could not create, delete, or start and stop the VM. Attempted actions beyond Reader scope correctly resulted in access denied behavior, demonstrating blast radius limitation.</p>
+
+                    <p><strong>Cost management and decommissioning:</strong> To avoid unnecessary spend and leave the environment clean, I listed resources with Azure CLI, deleted proof-of-concept resources, removed the <code>CloudScale-Logistics-RG</code> resource group, and verified that no unnecessary cost remained after decommissioning.</p>
+
+                    <p><strong>Results:</strong></p>
+                    <ul>
+                        <li>Reduced administrator onboarding time from several hours of manual per-resource assignments to a single group membership change, typically under five minutes.</li>
+                        <li>Eliminated direct Owner role assignments for non-admin identities such as Service Desk, significantly reducing the attack surface.</li>
+                        <li>Confirmed that Reader-level accounts could not perform destructive or state-changing actions on Azure resources, limiting blast radius.</li>
+                        <li>Established a reusable, group-based RBAC pattern aligned with least privilege and zero-trust principles.</li>
+                        <li>Improved audit readiness by centralizing role assignments on Entra ID groups, simplifying periodic access reviews for SOC 2 and ISO 27001.</li>
+                        <li>Demonstrated cross-platform IAM management via Azure Portal, Microsoft Graph PowerShell, and Azure CLI, increasing operational flexibility.</li>
+                    </ul>
+
+                    <p><strong>Challenges and learnings:</strong> This project deepened my understanding of Azure RBAC scopes and inheritance across subscriptions and resource groups, and showed how balancing usability with strict least privilege is central to effective cloud governance. It also highlighted how Azure Portal, Microsoft Graph PowerShell, and Azure CLI complement each other when building reliable and auditable IAM workflows.</p>
+
+                    <div class="projectDiagram">
+                        <img src="imgs/CloudScaleLogistics_diagram.png" alt="CloudScale Logistics Azure IAM and RBAC architecture diagram">
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li>
             <strong class="expandableHeader">J.P. Morgan Software Engineering Virtual Experience</strong>
             <span class="shortDescription">Built Spring Boot REST APIs with Kafka messaging and H2/JPA for Midas Core incentive and balance operations.</span>
             <div class="expandableContent">
