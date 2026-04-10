@@ -174,16 +174,50 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   });
 });
 
-// Normalize about text to keep encoding clean
 document.addEventListener("DOMContentLoaded", () => {
-  const aboutParas = document.querySelectorAll(".currentAbout p");
-  if (aboutParas.length >= 2) {
-    aboutParas[0].textContent =
-      "Hi, I'm Toheeb, a BSc Computer Science student at the University of Northampton (First Class expected 2026) focused on cybersecurity, AI safety, and secure backend engineering.";
-    aboutParas[1].textContent =
-      "I build resilient, explainable systems - from AI-powered sensory support tools to financial APIs with real-time messaging - and I love turning complex ideas into practical, secure products. Recent highlights: 2nd-place Elevate Great AI Competition and the J.P. Morgan Software Engineering Virtual Experience.";
+  const lightbox = document.getElementById("imageLightbox");
+  const lightboxImage = lightbox?.querySelector(".imageLightboxContent");
+  const lightboxClose = lightbox?.querySelector(".imageLightboxClose");
+  const expandableImages = document.querySelectorAll("[data-expandable-image]");
+
+  if (!lightbox || !lightboxImage || !lightboxClose || !expandableImages.length) {
+    return;
   }
 
+  function closeLightbox() {
+    lightbox.classList.remove("is-open");
+    lightbox.setAttribute("aria-hidden", "true");
+    lightboxImage.setAttribute("src", "");
+    lightboxImage.setAttribute("alt", "");
+    document.body.style.overflow = "";
+  }
+
+  expandableImages.forEach((buttonEl) => {
+    buttonEl.addEventListener("click", () => {
+      lightboxImage.setAttribute("src", buttonEl.dataset.imageSrc || "");
+      lightboxImage.setAttribute("alt", buttonEl.dataset.imageAlt || "");
+      lightbox.classList.add("is-open");
+      lightbox.setAttribute("aria-hidden", "false");
+      document.body.style.overflow = "hidden";
+    });
+  });
+
+  lightboxClose.addEventListener("click", closeLightbox);
+
+  lightbox.addEventListener("click", (event) => {
+    if (event.target === lightbox) {
+      closeLightbox();
+    }
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && lightbox.classList.contains("is-open")) {
+      closeLightbox();
+    }
+  });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
   const blogList = document.querySelector(".blogList");
   if (blogList) {
     blogList.innerHTML =

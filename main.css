@@ -255,6 +255,15 @@ display: none;
   padding-top: 5px;
 }
 
+.detailsAbout ul {
+  margin: 0.35em 0 0.75em 0;
+  padding-left: 1.25em;
+}
+
+.detailsAbout li {
+  margin: 0.35em 0;
+}
+
 .interestsDetail {
   margin-top: 1em;
   border-left: 3px solid #C5322E;
@@ -417,6 +426,111 @@ display: none;
   padding-right: 0.4em;
   margin-left: 45vw;
   text-decoration: none;
+}
+
+.projectActionRow {
+  margin: 1.2em 0 1em;
+}
+
+.projectReportButton {
+  display: inline-block;
+  padding: 0.7em 1.1em;
+  border-radius: 999px;
+  border: 1px solid #0d4b8f;
+  background: linear-gradient(135deg, #0d4b8f, #1371c8);
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 0.35em 1em hsla(209, 82%, 30%, 0.2);
+}
+
+.projectReportButton:hover {
+  background: linear-gradient(135deg, #0a3c72, #0f5fa8);
+}
+
+.projectGallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(14em, 1fr));
+  gap: 1em;
+  margin-top: 1.2em;
+}
+
+.projectGalleryItem {
+  margin: 0;
+  padding: 0.75em;
+  border: 1px solid #d9dee8;
+  border-radius: 0.8em;
+  background: #f8fbff;
+  box-shadow: 0 0.25em 0.85em hsla(0, 0%, 0%, 0.05);
+}
+
+.projectGalleryItem img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 0.55em;
+  margin-bottom: 0.7em;
+}
+
+.projectGalleryItem figcaption {
+  font-size: 0.95em;
+  line-height: 1.5;
+  color: #243244;
+}
+
+.projectImageButton {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: zoom-in;
+}
+
+.projectImageButton img {
+  margin-bottom: 0;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.projectImageButton:hover img {
+  transform: scale(1.02);
+  box-shadow: 0 0.45em 1.2em hsla(209, 82%, 30%, 0.16);
+}
+
+.imageLightbox {
+  position: fixed;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 2em;
+  background: hsla(217, 37%, 8%, 0.86);
+  z-index: 2000;
+}
+
+.imageLightbox.is-open {
+  display: flex;
+}
+
+.imageLightboxContent {
+  max-width: min(92vw, 70em);
+  max-height: 86vh;
+  width: auto;
+  height: auto;
+  border-radius: 0.8em;
+  box-shadow: 0 1em 3em hsla(0, 0%, 0%, 0.35);
+}
+
+.imageLightboxClose {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  border: 0;
+  background: transparent;
+  color: #fff;
+  font-size: 2.5rem;
+  line-height: 1;
+  cursor: pointer;
 }
 
 .skillsContent ul{

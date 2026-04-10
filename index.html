@@ -22,7 +22,7 @@
         <div class="toheebImage">
             <img src="imgs/myPicture.PNG" alt="Toheeb Image">
             <div><strong>Toheeb A. Husain 
-                <br>BSc CS at The University of Northampton
+                <br>Cloud Security Engineer
                  <br>Location: Northampton, England</strong>
             </div>
         </div>
@@ -45,24 +45,44 @@
 
     <h2 id="aboutMe">About me</h2>
     <div class="detailsAbout currentAbout">
-        <p>Hi, I'm Toheeb, a BSc Computer Science student at the University of Northampton (First Class expected 2026) focused on cybersecurity, AI safety, and secure backend engineering.</p>
-        <p>I build resilient, explainable systems—from AI-powered sensory support tools to financial APIs with real-time messaging—and I love turning complex ideas into practical, secure products.</p>
+        <p>Hi, I'm Toheeb - a cloud security and cybersecurity professional focused on threat detection, incident response, and securing cloud environments.</p>
+        <p>I have hands-on experience working across cloud security operations (SecOps), including investigating security incidents, identifying misconfigurations, and implementing remediation strategies to improve security posture. My work spans areas such as SIEM/SOAR (Microsoft Sentinel, Chronicle), logging and monitoring, IAM, and cloud infrastructure security.</p>
+        <p>Recently, I completed a series of practical cloud security projects where I:</p>
+        <ul>
+            <li>Investigated and responded to simulated cloud security incidents.</li>
+            <li>Remediated vulnerabilities across virtual machines, storage, and network configurations.</li>
+            <li>Applied secure design principles such as least privilege and restricted access controls.</li>
+            <li>Improved visibility through logging, monitoring, and compliance validation.</li>
+        </ul>
+        <p>I'm particularly interested in roles at the intersection of:</p>
+        <p><strong>Cloud Security | SOC Operations | Threat Detection | Automation (SIEM/SOAR)</strong></p>
+        <p>I enjoy breaking down complex security problems, working with real-world scenarios, and building systems that are not only functional but secure and resilient by design.</p>
     </div>
 
     <div class="aboutMeCollapse currentAbout">
         <p>
-            Cybersecurity-focused Computer Science student (First Class expected, 2026) with hands-on Spring/REST, Kafka, AI/IoT integrations, and threat intel experience.
+            Cloud security and cybersecurity professional focused on threat detection, incident response, cloud SecOps, and resilient-by-design systems.
         </p>
     </div>
 
     <div class="detailsAbout">
-        <p>Hi, I'm Toheeb, a BSc Computer Science student at the University of Northampton (expected First Class, 2026) focused on cybersecurity, AI safety, and secure backend engineering. I build systems that are both resilient and explainable—from AI-powered sensory support tools to financial APIs with real-time messaging.</p>
-        <p>Recent highlights include leading a 2nd-place Elevate Great AI Competition team, completing the J.P. Morgan Software Engineering Virtual Experience (Spring, REST APIs, Kafka, H2/JPA), and shipping hands-on projects with Spring Boot, Angular, Oracle SQL, and AI/IoT integrations. I learn fast, document clearly, and enjoy making complex systems practical.</p>
+        <p>Hi, I'm Toheeb - a cloud security and cybersecurity professional focused on threat detection, incident response, and securing cloud environments.</p>
+        <p>I have hands-on experience working across cloud security operations (SecOps), including investigating security incidents, identifying misconfigurations, and implementing remediation strategies to improve security posture. My work spans areas such as SIEM/SOAR (Microsoft Sentinel, Chronicle), logging and monitoring, IAM, and cloud infrastructure security.</p>
+        <p>Recently, I completed a series of practical cloud security projects where I:</p>
+        <ul>
+            <li>Investigated and responded to simulated cloud security incidents.</li>
+            <li>Remediated vulnerabilities across virtual machines, storage, and network configurations.</li>
+            <li>Applied secure design principles such as least privilege and restricted access controls.</li>
+            <li>Improved visibility through logging, monitoring, and compliance validation.</li>
+        </ul>
+        <p>I'm particularly interested in roles at the intersection of:</p>
+        <p><strong>Cloud Security | SOC Operations | Threat Detection | Automation (SIEM/SOAR)</strong></p>
+        <p>I enjoy breaking down complex security problems, working with real-world scenarios, and building systems that are not only functional but secure and resilient by design.</p>
     </div>
 
     <div class="aboutMeCollapse">
         <p>
-            Cybersecurity-focused Computer Science student (First Class expected, 2026) with hands-on Spring/REST, Kafka, AI/IoT integrations, and threat intel experience.
+            Cloud security and cybersecurity professional focused on threat detection, incident response, cloud SecOps, and resilient-by-design systems.
         </p>
     </div>
 
@@ -117,6 +137,110 @@
         <p>The headers of this project are collapsible. Hover on the header and click to view more details!!!</p>
     </details>
     <ul class="expandableList">
+        <li>
+            <strong class="expandableHeader">Respond and Recover from a Cloud Data Breach</strong>
+            <span class="shortDescription">A hands-on Google Cloud capstone focused on incident detection, containment, remediation, recovery, and compliance verification after a simulated data breach.</span>
+            <div class="expandableContent">
+                <div class="projectDetails">
+                    <p><strong>Hero summary:</strong> In this capstone, I investigated and remediated a cloud security incident affecting a virtual machine, firewall configuration, and public storage bucket. The scenario involved malware infection, exposed remote access services, privilege escalation risk, and public data exposure. I used Google Cloud security tooling and secure reconfiguration practices to contain the incident, recover workloads, and improve the environment's compliance posture.</p>
+
+                    <p><strong>Problem statement:</strong> Cymbal Retail experienced a major breach in its cloud environment. Attackers gained access to a vulnerable VM, exploited weak configurations, escalated privileges, and exfiltrated sensitive credit card data through a publicly accessible storage bucket. The environment also showed multiple high-severity findings, including open SSH/RDP exposure, a public IP on the VM, and a public bucket ACL.</p>
+
+                    <p><strong>My role:</strong></p>
+                    <ul>
+                        <li>Analyzing findings in Security Command Center.</li>
+                        <li>Identifying attack paths and misconfigurations.</li>
+                        <li>Containing the breach.</li>
+                        <li>Recovering the compromised workload.</li>
+                        <li>Remediating storage and firewall weaknesses.</li>
+                        <li>Validating remediation through compliance checks.</li>
+                    </ul>
+
+                    <p><strong>Tools and technologies:</strong></p>
+                    <ul>
+                        <li>Google Cloud Security Command Center</li>
+                        <li>Compute Engine</li>
+                        <li>Cloud Storage</li>
+                        <li>VPC Firewall Rules</li>
+                        <li>Snapshots / VM recovery</li>
+                        <li>Compliance reporting</li>
+                        <li>BigQuery / logging concepts</li>
+                        <li>IAM and least privilege principles</li>
+                    </ul>
+
+                    <p><strong>Key vulnerabilities identified:</strong></p>
+                    <ul>
+                        <li>Public bucket ACL exposing sensitive data</li>
+                        <li>VM with public IP address</li>
+                        <li>Open SSH and RDP ports to the internet</li>
+                        <li>Default service account / excessive API access risk</li>
+                        <li>Firewall logging disabled</li>
+                        <li>Malware activity on the compromised VM</li>
+                    </ul>
+
+                    <p><strong>What I did:</strong></p>
+                    <p><strong>1. Investigation</strong></p>
+                    <p>I reviewed active findings and compliance results in Security Command Center to understand the scope of the breach and identify the most critical affected resources: the storage bucket, compute instance, and firewall.</p>
+
+                    <p><strong>2. Containment and eradication</strong></p>
+                    <p>I shut down the compromised VM, prevented further exposure, and removed insecure access paths that enabled unauthorized entry. This reduced the attacker's ability to persist or continue lateral activity.</p>
+
+                    <p><strong>3. Recovery</strong></p>
+                    <p>I created a new VM from a trusted snapshot, removed public exposure, and enabled more secure settings such as secure boot to rebuild the workload in a safer state.</p>
+
+                    <p><strong>4. Storage remediation</strong></p>
+                    <p>I removed public access to the storage bucket and enforced uniform bucket-level access to eliminate insecure fine-grained public exposure.</p>
+
+                    <p><strong>5. Firewall hardening</strong></p>
+                    <p>I created a restricted SSH rule, removed overly permissive default firewall rules, and enabled logging to improve network visibility and reduce attack surface.</p>
+
+                    <p><strong>6. Compliance verification</strong></p>
+                    <p>I re-ran compliance checks to confirm that the major vulnerabilities had been remediated and that the environment's security posture had improved.</p>
+
+                    <p><strong>Outcome:</strong> This project demonstrated practical cloud security skills across detection, response, recovery, and hardening. The final state included a rebuilt VM from a clean snapshot, restricted firewall access, improved bucket security, and verified remediation of major findings tied to the breach scenario.</p>
+
+                    <p><strong>Key lessons learned:</strong></p>
+                    <ul>
+                        <li>Misconfigurations can be as dangerous as malware.</li>
+                        <li>Public exposure of compute and storage resources creates major risk.</li>
+                        <li>Incident response is not only about detection, but also containment and recovery.</li>
+                        <li>Logging and compliance validation are critical for both visibility and assurance.</li>
+                        <li>Least privilege and secure defaults reduce blast radius during an incident.</li>
+                    </ul>
+
+                    <div class="projectActionRow">
+                        <a href="Respond and Recover from a Cloud Data Breach Report.pdf" target="_blank" rel="noopener noreferrer" class="projectReportButton">View Final Report</a>
+                    </div>
+
+                    <div class="projectGallery">
+                        <figure class="projectGalleryItem">
+                            <button type="button" class="projectImageButton" data-expandable-image data-image-src="imgs/data-breach1.png" data-image-alt="Security Command Center findings showing exposed cloud resources and risk indicators">
+                                <img src="imgs/data-breach1.png" alt="Security Command Center findings showing exposed cloud resources and risk indicators">
+                            </button>
+                            <figcaption>Security Command Center surfaced the core breach indicators, helping prioritise the exposed bucket, vulnerable VM, and risky firewall posture.</figcaption>
+                        </figure>
+                        <figure class="projectGalleryItem">
+                            <button type="button" class="projectImageButton" data-expandable-image data-image-src="imgs/data-breach2.png" data-image-alt="Cloud storage security settings before remediation">
+                                <img src="imgs/data-breach2.png" alt="Cloud storage security settings before remediation">
+                            </button>
+                            <figcaption>The storage review confirmed public exposure on sensitive data, making bucket access remediation one of the first containment priorities.</figcaption>
+                        </figure>
+                        <figure class="projectGalleryItem">
+                            <button type="button" class="projectImageButton" data-expandable-image data-image-src="imgs/data-breach3.png" data-image-alt="Virtual machine recovery and hardened configuration in Google Cloud">
+                                <img src="imgs/data-breach3.png" alt="Virtual machine recovery and hardened configuration in Google Cloud">
+                            </button>
+                            <figcaption>Recovery focused on rebuilding the workload from a trusted snapshot and removing the insecure public-facing configuration.</figcaption>
+                        </figure>
+                        <figure class="projectGalleryItem">
+                            <button type="button" class="projectImageButton" data-expandable-image data-image-src="imgs/data-breach4.png" data-image-alt="Compliance and security posture improvements after remediation">
+                                <img src="imgs/data-breach4.png" alt="Compliance and security posture improvements after remediation">
+                            </button>
+                            <figcaption>Post-remediation checks verified that the highest-risk findings were closed and that the environment's compliance posture had materially improved.</figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </li>
         <li>
             <strong class="expandableHeader">Implementing Scalable Azure IAM and RBAC for CloudScale Logistics</strong>
             <span class="shortDescription">Built a group-based Azure IAM/RBAC model that enforced least privilege, removed permission creep, and cut admin onboarding to under five minutes.</span>
@@ -190,7 +314,7 @@
             </div>
         </li>
         <li>
-            <strong class="expandableHeader">SensoryNeural – AI-Powered Sensory Support System (Team Lead / Co-Creator)</strong>
+            <strong class="expandableHeader">SensoryNeural - AI-Powered Sensory Support System (Team Lead / Co-Creator)</strong>
             <span class="shortDescription">2nd Place, Elevate Great AI Competition (London, £2,500) with AI + IoT sensory-safe environments.</span>
             <div class="expandableContent">
                 <div class="projectDetails">
@@ -231,143 +355,55 @@
         </li>
     </ul>
 
-    <!-- Legacy projects (hidden)
-    <ul class="expandableList">
-        <li>
-            <strong class="expandableHeader">Claybrooks Zoo - Software Engineering Projects</strong>
-            <span class="shortDescription">As part of our group project, We developed a comprehensive software solution aimed at modernizing the data management system for a local zoo. The primary objective was to digitize their existing records and streamline operations, aligning the zoo with contemporary standards in wildlife management and visitor engagement.</span>
-            <div class="expandableContent">
-                <div class="projectDetails">
-                    <p> During my first year and first semester at the University of Northampton studying Software
-                        Engineering, one of the
-                        modules focused on imparting the significance of software engineering in real-world scenarios. This
-                        encompassed various stages such as problem identification, eliciting characteristics of the problem
-                        domain, specifying requirements, conducting system analysis, designing systems, building and testing
-                        them, evaluating their performance, implementing them, and ensuring their maintenance. These
-                        components constitute the fundamental aspects of software engineering. <br><br>
-    
-                        Under the guidance of exceptional lecturers, we were divided into subgroups and tasked with a
-                        project aimed at addressing the decline in annual revenue at a zoo, attributed to outdated
-                        technology. As the leader of the web development team, I collaborated closely with my team leader.
-                        Despite our team's commendable performance, we unfortunately lost the contract due to our higher
-                        pricing. Nonetheless, I take immense pride in our team's achievements and the high praise we
-                        received from our lecturer, resulting in an A+ grade for my exemplary work ethic and
-                        performance.<br><br>
-    
-                        I cannot overstate the incredible support provided by our lecturer, both in terms of delivering
-                        lectures and offering additional assistance outside the classroom, ensuring that all students were
-                        well-equipped for success.</p>
-                        <strong id="leaderDesign">Design Lead for Website Development</strong>
-                        <p>As the Design Lead for our project, I spearheaded the design department in creating the initial website framework prior to implementation. Utilizing tools like Figma and Draw.io, I guided our team through a structured design process to ensure a user-friendly and visually appealing interface.</p>
-                    <p>Key Responsibilities</p>
-                    <ul>
-                        <li>Spearheading the development of core functionalities including coursework summarization, interactive Q&A, extended reading suggestions, and content simplification.</li>
-                        <li>Collaborative Design Process: I facilitated brainstorming sessions with team members to gather insights and ideas, ensuring that our design reflected the needs of both the zoo and its visitors.</li>
-                        <li>Wireframing and Prototyping: Using Figma, I developed detailed wireframes and interactive prototypes, allowing stakeholders to visualize the layout and functionality of the website before development began. This iterative process helped us refine our ideas and improve usability based on feedback.</li>
-                        <li>Flowcharts and Diagrams: I utilized Draw.io to create flowcharts and diagrams that outlined user journeys and interactions. These visual aids were instrumental in clarifying the site's structure and ensuring that all team members were aligned on the project goals.</li>
-                        <li>Design Guidelines: I established a set of design guidelines that emphasized consistency, accessibility, and responsiveness across different devices. This ensured that the final product would meet modern web standards and provide an optimal experience for users.</li>
-                    </ul>
-                    <p>
-                        Through effective leadership and collaboration, we successfully designed a website framework that serves as a robust foundation for the zoo’s digital presence. This proactive approach allowed for a smoother implementation phase, ultimately leading to a user-centric website that enhances engagement and interaction with visitors.
-                    </p>
-                </div>
-                <div class="projectCollapse">
-                    <p>As part of our group project, We developed a comprehensive software solution aimed at modernizing the data management system for a local zoo. The primary objective was to digitize their existing records and streamline operations, aligning the zoo with contemporary standards in wildlife management and visitor engagement.</p>
-                </div>
-            </div>
-        </li>
-        <li>
-            <strong class="expandableHeader">Snack Man Game</strong>
-            <span class="shortDescription">An interactive web game built using HTML, CSS, & JavaScript </span>
-            <div class="expandableContent">
-                <div class="projectDetails">
-                    <p>
-                        In my first year, second semester at the University of Northampton, I took a web development module where we were tasked with building an interactive web game called Snack Man using HTML, CSS, and JavaScript. In this game, users could move the player around to collect points while avoiding collisions with enemies. The game featured a leaderboard that saved the highest scores, and players could control the game using on-screen buttons or their keyboard, with a live score display. Upon colliding with enemies, a life will be deducted from the initial three, and if the lives reached zero, the player would prompted to enter their name for the leaderboard, with scores saved using local storage. The development process went smoothly, thanks to our dedicated lecturer, who delivered engaging lectures and provided exceptional support to all students. His commitment to our success was commendable, and I felt privileged to learn from such an inspiring mentor.
-                    </p>
-                    <p>Key Game Features:</p>
-                    <ul>
-                        <li>Player Movement: Users can control the main character, navigating the game to collect points while avoiding enemies.</li>
-                        <li>Collision Detection: The game features a system to detect collisions with enemies, deducting lives from the player. Each player starts with three lives, and upon losing all lives, a prompt appears to enter their name for the leaderboard.</li>
-                        <li>Leaderboard: High scores are saved on a leaderboard using local storage, allowing players to see their ranking.</li>
-                        <li>Control Options: Players can control the game using on-screen buttons or their keyboard, with a score display that updates live as they play.</li>
-                    </ul>
-                    <p>
-                        This project will enhance students' understanding of HTML, CSS, and JavaScript implementation.
-                    </p>
-                </div>
-                <div class="project-condensed">
-                    <p>An interactive web game built using HTML, CSS, & JavaScript this project will enhance students' understanding of HTML, CSS, and JavaScript implementation. </p>
-                </div>
-                <video id="proVideos" width="320" height="240" controls src="Vids/snackmangame.mp4">Watch Snack Man 😍😍😍</video><br>
-                <a href="https://github.com/toheeb-orelope/UON-First-Year-Ass-Interactive-Game" class="projectDetailsButton" target="_blank">View Full Project Details</a>
-            </div>
-        </li>
-
-        <li>
-            <strong class="expandableHeader">Map App- iOS Project</strong>
-            <span class="shortDescription">Self learning of iOS development during my summer holiday.</span>
-            <div class="expandableContent">
-                <div class="projectDetails">
-                    <p>
-                        Learning iOS development has truly excited me. I am a self-motivated individual when it comes to technology, and this enthusiasm opened my eyes to the world of iOS development. During my first-year summer holiday, I decided to take a YouTube course where I learned Swift and SwiftUI from scratch. I gained important knowledge about various aspects and tools of iOS development, including the MVVM (Model-View-ViewModel) architecture, Core Data for data persistence, and techniques for saving data in local storage using caching. I also became familiar with the Codable and Decodable protocols for encoding and decoding data.
-                    </p>
-                    <p>Projects in iOS:</p>
-                    <ul>
-                        <li>Map App</li>
-                        <li>Cryptocurrency App</li>
-                        <li>TodoList</li>
-                        <li>Grocery App.</li>
-                    </ul>
-                    <p>
-                        The course enabled me to learn important tools of iOS development from scratch using Swift and SwiftUI.
-                    </p>
-                </div>
-                <div class="projectCollapse">
-                    <p>Self learning of iOS development during my summer holiday. The course enabled me to learn important tools of iOS development from scratch using Swift and SwiftUI.</p>
-                </div>
-                <video id="proVideos" width="320" height="240" controls src="Vids/Map_App.mp4">Where are you going to 😍😍😍</video>
-            </div>
-        </li>
-    </ul>
-    -->
-
     <h2 id="skills">Skills</h2>
     <div class="skillsContent">
         <div class="skillsGrid">
             <div class="skillCard">
-                <strong>Programming Languages</strong>
+                <strong>Cloud Security</strong>
                 <ul>
-                    <li>Python, Java, JavaScript, C++, PHP, SQL, HTML5, CSS3</li>
+                    <li>Google Cloud Platform (GCP), Microsoft Azure (Security focus), Identity &amp; Access Management (IAM), Least Privilege &amp; Access Control, Cloud Security Posture Management (CSPM)</li>
                 </ul>
             </div>
             <div class="skillCard">
-                <strong>Frameworks &amp; Libraries</strong>
+                <strong>SIEM &amp; SOAR</strong>
+                <ul>
+                    <li>Microsoft Sentinel (SIEM), Logic Apps (SOAR), Chronicle SIEM, Alert Investigation &amp; Triage, Incident Detection &amp; Response</li>
+                </ul>
+            </div>
+            <div class="skillCard">
+                <strong>Threat Detection &amp; Response</strong>
+                <ul>
+                    <li>Security Command Center (SCC), Log Analysis (Cloud Logging, Audit Logs), Indicators of Compromise (IoCs), Threat Hunting, Incident Response Lifecycle (NIST)</li>
+                </ul>
+            </div>
+            <div class="skillCard">
+                <strong>Cloud &amp; DevSecOps</strong>
+                <ul>
+                    <li>Terraform, Docker, Git / Version Control, CI/CD Basics, Secure Configuration Management</li>
+                </ul>
+            </div>
+            <div class="skillCard">
+                <strong>Threat Intelligence</strong>
+                <ul>
+                    <li>OSINT Investigations, MITRE ATT&amp;CK Framework, Cyber Kill Chain, Diamond Model of Intrusion Analysis, CTI Reporting &amp; Analysis</li>
+                </ul>
+            </div>
+            <div class="skillCard">
+                <strong>Data &amp; Monitoring</strong>
+                <ul>
+                    <li>BigQuery (Log Analysis), SQL, Log Correlation, Monitoring &amp; Alerting Concepts</li>
+                </ul>
+            </div>
+            <div class="skillCard">
+                <strong>Web &amp; Backend</strong>
                 <ul>
                     <li>React, Next.js, FastAPI, Spring Boot</li>
                 </ul>
             </div>
             <div class="skillCard">
-                <strong>Tools &amp; Platforms</strong>
+                <strong>Programming</strong>
                 <ul>
-                    <li>Docker, Git, AWS, Azure</li>
-                </ul>
-            </div>
-            <div class="skillCard">
-                <strong>Databases</strong>
-                <ul>
-                    <li>MySQL, Oracle SQL</li>
-                </ul>
-            </div>
-            <div class="skillCard">
-                <strong>Concepts &amp; Methods</strong>
-                <ul>
-                    <li>RESTful API design, OOP, Agile/Scrum, System Design, CI/CD</li>
-                </ul>
-            </div>
-            <div class="skillCard">
-                <strong>Soft Skills</strong>
-                <ul>
-                    <li>Project management, technical leadership, analytical problem-solving, communication, continuous learning</li>
+                    <li>Python, Java, JavaScript, C++, PHP</li>
                 </ul>
             </div>
         </div>
@@ -376,6 +412,7 @@
     <h2 id="certifications">Certifications</h2>
     <div class="skillsContent">
         <ul>
+            <li>Google Cloud Cybersecurity Certificate</li>
             <li>CompTIA A+</li>
             <li>Microsoft Certified: Azure AI Fundamentals</li>
             <li>arcX: Foundation Level Threat Intelligence Analyst</li>
@@ -390,7 +427,7 @@
     <ul class="expandableList">
         <li>
             <strong class="expandableHeader">Cloud Security Analyst Intern - Amdari.io</strong>
-            <span class="shortDescription">March 2026 - Present</span>
+            <span class="shortDescription">Mar 2026 - Present</span>
             <div class="expandableContent">
                 <div class="projectDetails">
                     <ul>
@@ -405,8 +442,8 @@
             </div>
         </li>
         <li>
-            <strong class="expandableHeader">Cyber Threat Intelligence Analyst Intern – CSFI</strong>
-            <span class="shortDescription">Cyber Security Forum Initiative (July 2025 – August 2025)</span>
+            <strong class="expandableHeader">Cyber Threat Intelligence Analyst Intern - CSFI</strong>
+            <span class="shortDescription">Cyber Security Forum Initiative (Jul 2025 - Aug 2025)</span>
             <div class="expandableContent">
                 <div class="projectDetails">
                     <ul>
@@ -419,8 +456,8 @@
             </div>
         </li>
         <li>
-            <strong class="expandableHeader">Mail Sorter – Angard Staffing (Royal Mail) Midland Super Hub</strong>
-            <span class="shortDescription">Northampton (Sep 2023 – Present)</span>
+            <strong class="expandableHeader">Mail Sorter - Angard Staffing (Royal Mail) Midland Super Hub</strong>
+            <span class="shortDescription">Northampton (Sep 2023 - Jan 2026)</span>
             <div class="expandableContent">
                 <div class="projectDetails">
                     <ul>
@@ -496,7 +533,7 @@
                         <li>Analyzed the tool source, rebuilt detection logic, and aligned with Sigma naming/conventions.</li>
                         <li>Simulated attack scenarios, tested locally, and validated with <code>sigma check</code>.</li>
                     </ul>
-                    <p><a href="https://github.com/SigmaHQ/sigma/pull/5801" target="_blank">Pull Request #5801 – Improved DNS Exfiltration Detection Logic</a></p>
+                    <p><a href="https://github.com/SigmaHQ/sigma/pull/5801" target="_blank">Pull Request #5801 - Improved DNS Exfiltration Detection Logic</a></p>
                     <p>This contribution strengthens SOC and detection teams by improving coverage for covert DNS exfiltration techniques.</p>
                 </div>
             </div>
@@ -506,21 +543,21 @@
     <h2 id="volunteering">Volunteering</h2>
     <ul class="expandableList">
         <li>
-            <strong class="expandableHeader">Assistant Team Lead – CSFI</strong>
-            <span class="shortDescription">Cyber Security Forum Initiative (Sep 2025 – Present)</span>
+            <strong class="expandableHeader">Assistant Team Lead - CSFI</strong>
+            <span class="shortDescription">Cyber Security Forum Initiative (Sep 2025 - Feb 2026)</span>
             <div class="expandableContent">
                 <div class="projectDetails">
                     <ul>
                         <li>Supports coordination of CTI tasks and mentors interns.</li>
                         <li>Assists with project planning and reviewing threat analysis reports.</li>
-                        <li>Continues contributing to CSFI’s mission on a volunteer basis.</li>
+                        <li>Continues contributing to CSFI's mission on a volunteer basis.</li>
                     </ul>
                 </div>
             </div>
         </li>
         <li>
-            <strong class="expandableHeader">AI Society Volunteer – University of Northampton</strong>
-            <span class="shortDescription">Sep 2023 – Present</span>
+            <strong class="expandableHeader">AI Society Volunteer - University of Northampton</strong>
+            <span class="shortDescription">Sep 2023 - Present</span>
             <div class="expandableContent">
                 <div class="projectDetails">
                     <ul>
@@ -970,6 +1007,11 @@
         <p>SWIFTDEV</p>
         <p>SWIFTDEV</p>
         <p>SWIFTDEV</p>
+    </div>
+
+    <div class="imageLightbox" id="imageLightbox" aria-hidden="true">
+        <button type="button" class="imageLightboxClose" aria-label="Close expanded image">&times;</button>
+        <img src="" alt="" class="imageLightboxContent">
     </div>
 </body>
 </html>
