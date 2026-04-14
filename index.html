@@ -138,6 +138,86 @@
     </details>
     <ul class="expandableList">
         <li>
+            <strong class="expandableHeader">Cloud Threat Detection and Automated Response with Microsoft Sentinel</strong>
+            <span class="shortDescription">Designed a Microsoft Sentinel SIEM/SOAR proof of concept for CloudScale Logistics to centralise Azure telemetry, detect privilege abuse and brute-force activity, and automate incident response.</span>
+            <div class="expandableContent">
+                <div class="projectDetails">
+                    <p><strong>Role:</strong> Cloud Security Analyst Intern - Amdari.io<br>
+                    <strong>Domain:</strong> Cloud Security Operations, SIEM/SOAR, Detection Engineering, Automation<br>
+                    <strong>Environment:</strong> Microsoft Azure, Microsoft Sentinel, Log Analytics Workspace, Microsoft Defender for Cloud, Microsoft Entra ID, Azure Logic Apps, KQL, Terraform</p>
+
+                    <p><strong>Hero summary:</strong> This was one of the most challenging projects I worked on during my internship. I built a Microsoft Sentinel proof of concept for CloudScale Logistics to close major visibility gaps across Azure, improve detection coverage, and reduce response time with automated workflows. The solution brought Azure Activity, Defender for Cloud, and identity telemetry into a single investigation layer and used analytics rules plus Logic Apps playbooks to turn raw alerts into actionable incidents.</p>
+
+                    <p><strong>Business challenges:</strong></p>
+                    <ul>
+                        <li>No unified security view across subscriptions, identities, and workloads.</li>
+                        <li>Alert fatigue from uncorrelated Defender alerts and manual portal reviews.</li>
+                        <li>Slow incident response with no documented runbooks or automated containment.</li>
+                        <li>Compliance pressure due to weak evidence of structured cloud threat detection.</li>
+                    </ul>
+
+                    <p><strong>What I built:</strong></p>
+                    <ul>
+                        <li>Deployed a dedicated Log Analytics Workspace and enabled Microsoft Sentinel on top of it.</li>
+                        <li>Connected Azure Activity Logs, Microsoft Defender for Cloud, and Microsoft Entra ID telemetry.</li>
+                        <li>Enabled built-in analytics for brute-force and suspicious activity scenarios.</li>
+                        <li>Worked with KQL to investigate sign-ins, role assignments, failed operations, and resource changes.</li>
+                        <li>Designed custom detection logic for risky privilege escalation outside business hours.</li>
+                        <li>Integrated Azure Logic Apps playbooks to automate incident notification and response workflows.</li>
+                        <li>Structured the project around data ingestion, analytics and detection, and automation and orchestration.</li>
+                    </ul>
+
+                    <p><strong>Tools and technologies:</strong></p>
+                    <ul>
+                        <li>Microsoft Sentinel</li>
+                        <li>Azure Log Analytics Workspace</li>
+                        <li>Microsoft Defender for Cloud</li>
+                        <li>Microsoft Entra ID</li>
+                        <li>Azure Activity Logs</li>
+                        <li>Azure Logic Apps</li>
+                        <li>Kusto Query Language (KQL)</li>
+                        <li>Terraform for infrastructure as code</li>
+                    </ul>
+
+                    <p><strong>Key outcomes:</strong></p>
+                    <ul>
+                        <li>Centralised cloud telemetry into one searchable security operations platform.</li>
+                        <li>Improved visibility into control-plane activity, authentication patterns, and suspicious changes.</li>
+                        <li>Reduced the dependence on manual alert triage by correlating signals into incidents.</li>
+                        <li>Created a repeatable detection and response approach aligned to Detect, Respond, and Recover.</li>
+                    </ul>
+
+                    <p><strong>Key lessons learned:</strong></p>
+                    <ul>
+                        <li>Detection engineering only works when the data foundation is complete and consistent.</li>
+                        <li>Uncorrelated alerts create noise; incident context is what makes triage effective.</li>
+                        <li>KQL is essential for turning cloud activity into investigations and usable detections.</li>
+                        <li>Automation matters most when it removes response delay in high-severity scenarios.</li>
+                        <li>Strong cloud security posture depends on both visibility and operational response discipline.</li>
+                    </ul>
+
+                    <div class="projectActionRow">
+                        <a href="https://github.com/toheeb-orelope/infrastructure_as_code" target="_blank" rel="noopener noreferrer" class="projectReportButton">View IaC Repository</a>
+                    </div>
+
+                    <div class="projectGallery">
+                        <figure class="projectGalleryItem">
+                            <button type="button" class="projectImageButton" data-expandable-image data-image-src="imgs/logiapps.png" data-image-alt="Azure Logic Apps automation workflow used for Microsoft Sentinel incident response">
+                                <img src="imgs/logiapps.png" alt="Azure Logic Apps automation workflow used for Microsoft Sentinel incident response">
+                            </button>
+                            <figcaption>The Logic Apps playbook layer handled orchestration, making it possible to move from detection to fast, structured response instead of relying on manual escalation.</figcaption>
+                        </figure>
+                        <figure class="projectGalleryItem">
+                            <button type="button" class="projectImageButton" data-expandable-image data-image-src="imgs/SIEM-SOAR-ARCHITECT.png" data-image-alt="Microsoft Sentinel SIEM and SOAR architecture for CloudScale Logistics">
+                                <img src="imgs/SIEM-SOAR-ARCHITECT.png" alt="Microsoft Sentinel SIEM and SOAR architecture for CloudScale Logistics">
+                            </button>
+                            <figcaption>This architecture shows how telemetry ingestion, analytics rules, incident correlation, and SOAR playbooks fit together to improve visibility and compress response time.</figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li>
             <strong class="expandableHeader">Respond and Recover from a Cloud Data Breach</strong>
             <span class="shortDescription">A hands-on Google Cloud capstone focused on incident detection, containment, remediation, recovery, and compliance verification after a simulated data breach.</span>
             <div class="expandableContent">
@@ -573,7 +653,7 @@
     <ul class="blogList"></ul>
         <h2 id="blog">Blog</h2>
         <ul class="blogList">
-            <li><a href="https://www.linkedin.com/in/toheeb-ajala-husain-a9110b255/recent-activity/all/" target="_blanks">Find out more 😍😍😍 </a></li>
+            <li><a href="https://www.linkedin.com/in/toheeb-ajala-husain-a9110b255/recent-activity/all/" target="_blank" rel="noopener noreferrer">Find out more</a></li>
         </ul>
     </ul>
     <hr>
