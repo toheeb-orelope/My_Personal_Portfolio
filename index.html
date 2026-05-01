@@ -143,6 +143,93 @@
     </details>
     <ul class="expandableList">
         <li>
+            <strong class="expandableHeader">AWS Infrastructure as Code and CI/CD Governance</strong>
+            <span class="shortDescription">Migrated manually managed AWS infrastructure to Terraform with GitHub Actions, OIDC authentication, remote state, and a senior engineer approval gate for controlled production changes.</span>
+            <div class="expandableContent">
+                <div class="projectDetails">
+                    <p><strong>Role:</strong> Cloud Security Analyst Consultant - Amdari.io<br>
+                    <strong>Domain:</strong> Cloud Security Operations, Infrastructure as Code, CI/CD Governance, Cloud Risk Reduction<br>
+                    <strong>Environment:</strong> AWS, Terraform, GitHub Actions, OpenID Connect (OIDC), IAM, S3, DynamoDB, KMS, VPC, EC2, RDS PostgreSQL, Security Groups, GuardDuty, CloudWatch</p>
+
+                    <p><strong>Hero summary:</strong> I designed and implemented a Terraform-based AWS infrastructure workflow for a regulated fintech organisation where manual console changes had created operational, security, and compliance risk. The solution moved infrastructure into version-controlled code, introduced automated validation through GitHub Actions, used OIDC to remove long-lived AWS credentials, and added a production approval gate so high-risk infrastructure changes require senior engineer review before deployment.</p>
+
+                    <p><strong>Business challenges:</strong></p>
+                    <ul>
+                        <li>No authoritative record of cloud infrastructure, making recovery and onboarding dependent on senior engineers' memory.</li>
+                        <li>Production changes could be made directly in the AWS console without peer review, approval, or a clear rollback path.</li>
+                        <li>Environment drift between development, staging, and production caused failed deployments and delayed releases.</li>
+                        <li>Disaster recovery was difficult to execute because infrastructure configuration was not repeatable from code.</li>
+                        <li>Regulatory expectations required documented, auditable, and controlled change management for production systems.</li>
+                    </ul>
+
+                    <p><strong>What I built:</strong></p>
+                    <ul>
+                        <li>Created Terraform configuration for the AWS network, compute, database, security group, logging, and encryption layers.</li>
+                        <li>Separated one-time backend bootstrap resources from the main application infrastructure.</li>
+                        <li>Configured S3 remote state with DynamoDB locking and KMS encryption to protect Terraform state and prevent concurrent changes.</li>
+                        <li>Built a GitHub Actions pipeline that runs <code>terraform fmt</code>, <code>terraform init</code>, <code>terraform validate</code>, <code>terraform plan</code>, and <code>terraform apply</code>, and <code>terraform destroy</code>.</li>
+                        <li>Stored the generated Terraform plan as a workflow artifact so the reviewed plan is the exact plan applied later.</li>
+                        <li>Added a protected production environment gate that pauses deployment until a senior engineer reviews and approves the change.</li>
+                        <li>Used GitHub OIDC with AWS IAM role assumption so the pipeline does not rely on stored AWS access keys.</li>
+                    </ul>
+
+                    <p><strong>Key outcomes:</strong></p>
+                    <ul>
+                        <li>Infrastructure changes now follow a controlled path: plan, review, approval, and apply.</li>
+                        <li>Production deployments have a clear audit trail through GitHub commits, workflow logs, plan artifacts, and environment approvals.</li>
+                        <li>The environment can be rebuilt from Terraform instead of relying on undocumented manual console knowledge.</li>
+                        <li>Security-sensitive changes, such as database and security group updates, are reviewed before reaching production.</li>
+                        <li>The workflow reduces configuration drift and gives the business stronger evidence for compliance and operational resilience.</li>
+                    </ul>
+
+                    <p><strong>Key lessons learned:</strong></p>
+                    <ul>
+                        <li>Infrastructure as Code is not only an engineering convenience; it is a business control for regulated environments.</li>
+                        <li>Approval gates are most valuable when reviewers approve the exact plan that will be applied.</li>
+                        <li>OIDC improves CI/CD security by removing the need to store long-lived cloud credentials in GitHub.</li>
+                        <li>Remote state, locking, and encryption are foundational controls for safe Terraform collaboration.</li>
+                    </ul>
+
+                    <div class="projectActionRow">
+                        <a href="https://github.com/toheeb-orelope/terraform-project/" target="_blank" rel="noopener noreferrer" class="projectReportButton">View Terraform Repository</a>
+                    </div>
+
+                    <div class="projectGallery">
+                        <figure class="projectGalleryItem">
+                            <button type="button" class="projectImageButton" data-expandable-image data-image-src="imgs/github_actions.png" data-image-alt="GitHub Actions Terraform CI/CD workflow overview">
+                                <img src="imgs/github_actions.png" alt="GitHub Actions Terraform CI/CD workflow overview">
+                            </button>
+                            <figcaption>The GitHub Actions workflow gives infrastructure changes a structured CI/CD path instead of relying on direct AWS console updates.</figcaption>
+                        </figure>
+                        <figure class="projectGalleryItem">
+                            <button type="button" class="projectImageButton" data-expandable-image data-image-src="imgs/plans.png" data-image-alt="Terraform plan job running in GitHub Actions">
+                                <img src="imgs/plans.png" alt="Terraform plan job running in GitHub Actions">
+                            </button>
+                            <figcaption>The plan stage checks formatting, initializes Terraform, validates the configuration, and produces the change plan for review.</figcaption>
+                        </figure>
+                        <figure class="projectGalleryItem">
+                            <button type="button" class="projectImageButton" data-expandable-image data-image-src="imgs/review.png" data-image-alt="GitHub production environment approval gate waiting for review">
+                                <img src="imgs/review.png" alt="GitHub production environment approval gate waiting for review">
+                            </button>
+                            <figcaption>The production environment gate pauses the apply job until a senior engineer reviews and approves the infrastructure change.</figcaption>
+                        </figure>
+                        <figure class="projectGalleryItem">
+                            <button type="button" class="projectImageButton" data-expandable-image data-image-src="imgs/apply.png" data-image-alt="Terraform apply job completed after approval">
+                                <img src="imgs/apply.png" alt="Terraform apply job completed after approval">
+                            </button>
+                            <figcaption>After approval, the pipeline applies the reviewed Terraform plan, creating a traceable path from change request to deployment.</figcaption>
+                        </figure>
+                        <figure class="projectGalleryItem">
+                            <button type="button" class="projectImageButton" data-expandable-image data-image-src="imgs/aws_infr.png" data-image-alt="AWS infrastructure architecture with VPC, EC2, RDS, backend state, and security services">
+                                <img src="imgs/aws_infr.png" alt="AWS infrastructure architecture with VPC, EC2, RDS, backend state, and security services">
+                            </button>
+                            <figcaption>The AWS architecture combines a Terraform remote backend with VPC networking, EC2, RDS PostgreSQL, encryption, logging, and threat detection controls.</figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li>
             <strong class="expandableHeader">Cloud Threat Detection and Automated Response with Microsoft Sentinel</strong>
             <span class="shortDescription">Built a Microsoft Sentinel SIEM/SOAR proof of concept that centralised Azure telemetry, introduced KQL-based detections, automated response workflows, and used Terraform to create reusable deployment templates.</span>
             <div class="expandableContent">
