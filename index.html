@@ -143,6 +143,116 @@
     </details>
     <ul class="expandableList">
         <li>
+            <strong class="expandableHeader">SecureFlow: End-to-End DevSecOps Security Platform</strong>
+            <span class="shortDescription">Designed and secured a vulnerable cloud-native banking platform by implementing DevSecOps controls across application, infrastructure, container, Kubernetes, supply chain, secrets, and runtime monitoring layers.</span>
+            <div class="expandableContent">
+                <div class="projectDetails">
+                    <p><strong>Role:</strong> Application Security & Cloud Security Engineer<br>
+                    <strong>Domain:</strong> DevSecOps, Application Security, Kubernetes Security, Cloud Security, Container Security, Supply Chain Security, Runtime Threat Detection<br>
+                    <strong>Environment:</strong> Python, Flask, PostgreSQL, Docker, Kubernetes, Terraform, GitHub Actions, HashiCorp Vault, OPA Gatekeeper, Falco, Loki, Grafana, SonarQube, Gitleaks, Trivy, Checkov, Cosign, Sigstore</p>
+
+                    <p><strong>Hero summary:</strong> SecureFlow is a deliberately vulnerable banking platform developed to simulate real-world security weaknesses across modern cloud-native environments. I designed and implemented a complete DevSecOps security architecture that integrates automated security testing, policy enforcement, secrets management, software supply chain security, and runtime threat detection. The objective was to demonstrate how security can be embedded throughout the software development lifecycle rather than being applied only before production deployment.</p>
+
+                    <p><strong>Business challenges:</strong></p>
+                    <ul>
+                        <li>Application services contained exploitable vulnerabilities including SQL Injection, Cross-Site Scripting (XSS), Broken Authentication, Insecure Direct Object References (IDOR), CSRF, insecure session management, and business logic flaws.</li>
+                        <li>Secrets such as database credentials, JWT signing keys, session secrets, and cloud credentials were stored in plaintext across source code, Docker Compose files, environment variables, and Kubernetes ConfigMaps.</li>
+                        <li>Container workloads were deployed with insecure defaults including root containers, vulnerable base images, excessive privileges, missing resource controls, and weak workload isolation.</li>
+                        <li>Infrastructure-as-Code introduced cloud security risks including overly permissive IAM roles, public exposure of resources, weak encryption controls, and insecure Kubernetes configurations.</li>
+                        <li>No automated security validation existed within the delivery process, allowing vulnerable code and infrastructure changes to progress toward deployment without review.</li>
+                        <li>Limited runtime visibility made it difficult to detect suspicious activity, privilege escalation attempts, or abnormal workload behaviour after deployment.</li>
+                    </ul>
+
+                    <p><strong>What I built:</strong></p>
+                    <ul>
+                        <li>Conducted a structured security assessment and documented more than 40 vulnerabilities across application, infrastructure, container, and Kubernetes environments.</li>
+                        <li>Mapped identified weaknesses against OWASP categories including Broken Access Control, Injection, Authentication Failures, Security Misconfiguration, Insecure Design, Cryptographic Failures, and Software Supply Chain Failures.</li>
+                        <li>Remediated application-layer vulnerabilities including SQL Injection, XSS, weak authentication controls, sensitive error disclosure, IDOR, CSRF, mass assignment, and insecure transaction logic.</li>
+                        <li>Integrated Gitleaks into GitHub Actions to detect exposed secrets and automatically block commits containing credentials, tokens, or passwords.</li>
+                        <li>Implemented SonarQube for static application security testing (SAST), vulnerability detection, code quality analysis, and security hotspot reporting.</li>
+                        <li>Integrated Trivy to scan container images, repositories, and Kubernetes manifests for known vulnerabilities and security misconfigurations.</li>
+                        <li>Implemented Checkov to evaluate Terraform and Kubernetes Infrastructure-as-Code against cloud security and compliance best practices.</li>
+                        <li>Designed a risk-based Security Gate that aggregates security findings and blocks deployment when critical vulnerabilities are identified.</li>
+                        <li>Implemented HashiCorp Vault with Kubernetes authentication, service-specific policies, and Vault Agent Injector to eliminate secrets from source code and Kubernetes resources.</li>
+                        <li>Configured Vault audit logging to verify that each service could access only its authorised secret path.</li>
+                        <li>Applied Kubernetes hardening controls including non-root execution, resource requests and limits, secure security contexts, image pinning, network segmentation, and policy enforcement.</li>
+                        <li>Implemented OPA Gatekeeper policies to enforce Kubernetes security standards and prevent insecure workloads from being deployed.</li>
+                        <li>Built software supply chain controls using Cosign, Sigstore, and SBOM attestation to strengthen image provenance and deployment integrity.</li>
+                        <li>Implemented Falco runtime threat detection and integrated Grafana dashboards for security monitoring, observability, and incident investigation.</li>
+                        <li>Developed an end-to-end security architecture covering build-time, deploy-time, and runtime security controls.</li>
+                    </ul>
+
+                    <p><strong>Key outcomes:</strong></p>
+                    <ul>
+                        <li>Established a secure CI/CD workflow capable of automatically identifying security weaknesses before deployment.</li>
+                        <li>Implemented multiple layers of defence across application, infrastructure, container, Kubernetes, and runtime environments.</li>
+                        <li>Eliminated hardcoded secrets from application code, deployment manifests, and infrastructure configurations through centralised secret management.</li>
+                        <li>Improved Kubernetes security posture through workload hardening, policy enforcement, and network segmentation.</li>
+                        <li>Strengthened software supply chain security through image signing, signature verification, and SBOM generation.</li>
+                        <li>Enabled real-time detection of suspicious activity through Falco-based runtime monitoring and Grafana observability.</li>
+                        <li>Created an auditable security workflow supported by security scans, Vault audit logs, signed container images, SBOM artefacts, and deployment evidence.</li>
+                        <li>Demonstrated how DevSecOps principles can be applied to secure applications throughout the entire software development lifecycle.</li>
+                    </ul>
+
+                    <p><strong>Key lessons learned:</strong></p>
+                    <ul>
+                        <li>Security is most effective when embedded throughout the development lifecycle rather than treated as a final deployment checkpoint.</li>
+                        <li>Secret management requires identity controls, access policies, auditing, and secure injection mechanisms rather than simply encrypting values.</li>
+                        <li>Security gates should be risk-based and capable of distinguishing between blocking and non-blocking findings.</li>
+                        <li>Kubernetes security requires multiple complementary controls including workload hardening, policy enforcement, network isolation, and runtime monitoring.</li>
+                        <li>Software supply chain security is increasingly important as organisations become more dependent on containers and third-party components.</li>
+                        <li>Runtime detection complements preventative controls by providing visibility into threats that bypass earlier security layers.</li>
+                        <li>Effective cloud security relies on combining preventative, detective, and governance controls rather than relying on a single security mechanism.</li>
+                    </ul>
+
+                    <div class="projectGallery">
+                        <figure class="projectGalleryItem">
+                            <button type="button" class="projectImageButton" data-expandable-image data-image-src="imgs/trivy1.png" data-image-alt="Trivy container and manifest security scan results">
+                                <img src="imgs/trivy1.png" alt="Trivy container and manifest security scan results">
+                            </button>
+                            <figcaption>Trivy scans identified vulnerable container images and insecure Kubernetes manifest configurations.</figcaption>
+                        </figure>
+                        <figure class="projectGalleryItem">
+                            <button type="button" class="projectImageButton" data-expandable-image data-image-src="imgs/trivy2.png" data-image-alt="Trivy vulnerability report for cloud-native platform images">
+                                <img src="imgs/trivy2.png" alt="Trivy vulnerability report for cloud-native platform images">
+                            </button>
+                            <figcaption>Continuous image scanning ensured build-time vulnerabilities were detected before deployment.</figcaption>
+                        </figure>
+                        <figure class="projectGalleryItem">
+                            <button type="button" class="projectImageButton" data-expandable-image data-image-src="imgs/sonarqube1.png" data-image-alt="SonarQube analysis showing code quality and security hotspots">
+                                <img src="imgs/sonarqube1.png" alt="SonarQube analysis showing code quality and security hotspots">
+                            </button>
+                            <figcaption>SonarQube provided static analysis and security hotspot reporting for the application codebase.</figcaption>
+                        </figure>
+                        <figure class="projectGalleryItem">
+                            <button type="button" class="projectImageButton" data-expandable-image data-image-src="imgs/sonarqube2.png" data-image-alt="SonarQube dashboard for DevSecOps code quality checks">
+                                <img src="imgs/sonarqube2.png" alt="SonarQube dashboard for DevSecOps code quality checks">
+                            </button>
+                            <figcaption>The platform used SonarQube findings to block poor-quality and insecure code before merge.</figcaption>
+                        </figure>
+                        <figure class="projectGalleryItem">
+                            <button type="button" class="projectImageButton" data-expandable-image data-image-src="imgs/secureFlow_V.png" data-image-alt="SecureFlow platform vulnerability assessment and remediation overview">
+                                <img src="imgs/secureFlow_V.png" alt="SecureFlow platform vulnerability assessment and remediation overview">
+                            </button>
+                            <figcaption>SecureFlow combined application, container, Kubernetes, and cloud risk remediation in one end-to-end architecture.</figcaption>
+                        </figure>
+                        <figure class="projectGalleryItem">
+                            <button type="button" class="projectImageButton" data-expandable-image data-image-src="imgs/Securitygate_images.png" data-image-alt="Security gate workflow blocking critical vulnerabilities in CI/CD">
+                                <img src="imgs/Securitygate_images.png" alt="Security gate workflow blocking critical vulnerabilities in CI/CD">
+                            </button>
+                            <figcaption>The risk-based Security Gate prevented deployments when critical findings were detected during CI/CD.</figcaption>
+                        </figure>
+                        <figure class="projectGalleryItem">
+                            <button type="button" class="projectImageButton" data-expandable-image data-image-src="imgs/falco-grafana.png" data-image-alt="Falco runtime detection and Grafana security monitoring dashboards">
+                                <img src="imgs/falco-grafana.png" alt="Falco runtime detection and Grafana security monitoring dashboards">
+                            </button>
+                            <figcaption>Falco and Grafana provided runtime threat visibility for suspicious container and Kubernetes activity.</figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li>
             <strong class="expandableHeader">AWS Infrastructure as Code and CI/CD Governance</strong>
             <span class="shortDescription">Migrated manually managed AWS infrastructure to Terraform with GitHub Actions, OIDC authentication, remote state, and a senior engineer approval gate for controlled production changes.</span>
             <div class="expandableContent">
