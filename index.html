@@ -143,6 +143,53 @@
     </details>
     <ul class="expandableList">
         <li>
+            <strong class="expandableHeader">SentinelPay: AWS Cloud Security & DevSecOps</strong>
+            <span class="shortDescription">Hardened a vulnerable fintech platform into a Terraform-managed AWS architecture with private ECS Fargate services, WAF-protected ALB ingress, customer-managed encryption, secrets lifecycle controls, CI/CD security gates, and managed detection and response.</span>
+            <div class="expandableContent">
+                <div class="projectDetails">
+                    <p><strong>Role:</strong> Cloud Security & DevSecOps Engineer<br>
+                    <strong>Domain:</strong> AWS Security Architecture, DevSecOps, Infrastructure as Code, Detection Engineering, Secrets Management, Supply Chain Security<br>
+                    <strong>Environment:</strong> AWS, Terraform, ECS Fargate, ALB, WAF, Route 53, ACM, RDS PostgreSQL, ElastiCache Redis, S3 Object Lock, KMS, Secrets Manager, IAM, CloudTrail, GuardDuty, Security Hub, AWS Config, EventBridge, Lambda, GitHub Actions OIDC, Docker, Cosign, Syft, Trivy, Checkov, tfsec, SonarQube, Gitleaks, Python Flask</p>
+
+                    <p><strong>Hero summary:</strong> SentinelPay is a fintech security engineering project where I took an inherited vulnerable Flask-based payments and KYC platform and designed a defensible AWS deployment around the project security constraints. The work covered application hardening, private network design, encrypted data services, scoped service identities, runtime secret handling, signed CI/CD delivery, and cloud-native detection and response.</p>
+
+                    <p><strong>Business challenges:</strong></p>
+                    <ul>
+                        <li>The inherited application required cloud hardening before it could be safely deployed as a realistic payments and KYC workload.</li>
+                        <li>Internet ingress had to terminate only at an AWS-managed Layer 7 service with AWS WAF coverage for common web attacks and payment endpoint rate limiting.</li>
+                        <li>Runtime compute, PostgreSQL, Redis, and KYC document storage had to remain private and encrypted with customer-managed KMS keys.</li>
+                        <li>Pipeline access needed to use GitHub Actions OIDC instead of long-lived AWS keys, with security gates before deployment.</li>
+                        <li>The environment needed a detection foundation with GuardDuty, CloudTrail, Security Hub, AWS Config, EventBridge containment, and honeytoken alerting.</li>
+                    </ul>
+
+                    <p><strong>Architecture implemented:</strong></p>
+                    <ul>
+                        <li><strong>Edge plane:</strong> ALB with HTTPS termination, ACM certificate, AWS WAF managed rule groups for Common, SQLi, and XSS coverage, plus a custom payments rate-limit rule.</li>
+                        <li><strong>Application plane:</strong> ECS Fargate payments-api and kyc-api services in private subnets across multiple availability zones, using separate task roles and security groups.</li>
+                        <li><strong>Data plane:</strong> RDS PostgreSQL, ElastiCache Redis with TLS and AUTH token, and a KYC S3 bucket with versioning, server access logging, public access blocks, Object Lock governance mode, and customer-managed KMS encryption.</li>
+                        <li><strong>Identity and secrets:</strong> least-privilege IAM, KMS key-policy separation between administrators and users, Secrets Manager for runtime secrets, rotation Lambda wiring, and GitHub Actions OIDC roles for plan, apply, ECR push, and Lambda signing.</li>
+                        <li><strong>Detection and response:</strong> GuardDuty protection plans, CloudTrail with validation, Security Hub standards, AWS Config recording and conformance support, EventBridge routing for high-severity findings, Lambda containment hooks, and an instrumented honeytoken pattern.</li>
+                        <li><strong>Pipeline security:</strong> Gitleaks, SonarQube, Bandit, Trivy, Checkov, tfsec, SBOM generation, Cosign signing, AWS Signer-backed Lambda code signing, and environment-based promotion from dev to staging to production.</li>
+                    </ul>
+
+                    <p><strong>Outcome:</strong> The project produced a production-grade security architecture blueprint for a non-production fintech environment. It demonstrates how to translate explicit security constraints into Terraform modules, CI/CD controls, AWS managed security services, and operational evidence suitable for a security review.</p>
+
+                    <div class="projectActionRow">
+                        <a href="https://github.com/toheeb-orelope/Amdari-Project--02" target="_blank" rel="noopener noreferrer" class="projectReportButton">View SentinelPay Repository</a>
+                    </div>
+
+                    <div class="projectGallery">
+                        <figure class="projectGalleryItem">
+                            <button type="button" class="projectImageButton" data-expandable-image data-image-src="imgs/sentinelpay-security-architecture.svg" data-image-alt="SentinelPay AWS cloud security and DevSecOps architecture diagram">
+                                <img src="imgs/sentinelpay-security-architecture.svg" alt="SentinelPay AWS cloud security and DevSecOps architecture diagram">
+                            </button>
+                            <figcaption>End-to-end SentinelPay security architecture covering application hardening, AWS infrastructure, CI/CD gates, supply chain controls, and detection response.</figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li>
             <strong class="expandableHeader">SecureFlow: End-to-End DevSecOps Security Platform</strong>
             <span class="shortDescription">Designed and secured a vulnerable cloud-native banking platform by implementing DevSecOps controls across application, infrastructure, container, Kubernetes, supply chain, secrets, and runtime monitoring layers.</span>
             <div class="expandableContent">
