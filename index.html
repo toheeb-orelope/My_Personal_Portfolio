@@ -189,6 +189,63 @@
                 </div>
             </div>
         </li>
+        <li class="antiPhishProject">
+            <strong class="expandableHeader" id="anti-phish-ai">Anti-Phish AI: Explainable Phishing Detection</strong>
+            <span class="shortDescription">Built a browser defence prototype that combines AI and threat intelligence to flag phishing, explain warnings, and support safer browsing. BSc dissertation, 2026.</span>
+            <div class="expandableContent">
+                <div class="projectDetails">
+                    <p><strong>Role:</strong> Researcher &amp; Developer, BSc (Hons) Computing dissertation<br>
+                    <strong>Institution:</strong> University of Northampton &middot; April 2026<br>
+                    <strong>Focus:</strong> Phishing prevention, explainable AI, threat intelligence, and usable security</p>
+
+                    <p><strong>The business problem:</strong> A convincing phishing link can expose employee credentials and customer information, creating fraud risk, recovery work, and loss of trust. Protection also has to preserve everyday work: unnecessary blocks interrupt legitimate browsing, while unexplained warnings make it harder for people to judge risk.</p>
+
+                    <p><strong>My solution:</strong> I built Anti-Phish AI, a research prototype connecting a Chrome extension, a Python FastAPI detection service, and a web dashboard. It combines machine-learning predictions with VirusTotal threat intelligence and presents the evidence behind a decision. In the demonstrated blocking workflow, agreement between the local AI and VirusTotal triggers a warning page with options to return safely or inspect the result.</p>
+
+                    <p><strong>Why it matters:</strong></p>
+                    <ul>
+                        <li><strong>Protect access and information:</strong> bring phishing checks into the browser, where users encounter suspicious links.</li>
+                        <li><strong>Support informed decisions:</strong> show the verdict, model confidence, reputation findings, and explanation factors together so users and security reviewers can understand a warning.</li>
+                        <li><strong>Balance protection with productivity:</strong> explore stricter decision thresholds and trusted-domain logic to limit inappropriate blocking of legitimate sites.</li>
+                    </ul>
+
+                    <p><strong>What I delivered:</strong> Prepared a balanced dataset of 790,852 URLs; trained and compared six model families; investigated probability calibration and SHAP explanations; and integrated the detection pipeline with browser warnings and a Next.js dashboard. This took the work from research and model evaluation through to a demonstrable user workflow.</p>
+
+                    <p><strong>Measured research outcome:</strong> The dissertation reports <strong>97.9% accuracy</strong> and <strong>0.997 ROC-AUC</strong> for the best standalone model, LSTM, on the held-out test set. These are offline model results, not the accuracy of the complete browser protection workflow. The prototype demonstrates detection, blocking, and explanation; reductions in business losses, incident volume, and investigation time were not measured.</p>
+
+                    <p><strong>Engineering judgement:</strong> I evaluated the trade-offs between detection quality, confidence reliability, false positives, and response time. A production rollout would need further testing against new phishing campaigns, user evaluation, and validation of end-to-end latency and external API dependencies.</p>
+
+                    <p><strong>Tools:</strong> Python, FastAPI, Random Forest, XGBoost, LightGBM, CNN, FFNN, LSTM, SHAP, VirusTotal API, Chrome Extension APIs, Next.js, React, TypeScript.</p>
+
+                    <div class="projectActionRow">
+                        <a href="https://github.com/toheeb-orelope/anti-phish-ai" target="_blank" rel="noopener noreferrer" class="projectReportButton">View AI &amp; Backend Code</a>
+                        <a href="https://github.com/toheeb-orelope/anti-phish-extension_dashboard" target="_blank" rel="noopener noreferrer" class="projectReportButton">View Extension &amp; Dashboard Code</a>
+                    </div>
+
+                    <p><strong>Project evidence:</strong> Original figures from my dissertation, <em>Real-Time Phishing Detection Using AI and Threat Intelligence APIs</em>. Select an image to enlarge it.</p>
+                    <div class="projectGallery">
+                        <figure class="projectGalleryItem">
+                            <button type="button" class="projectImageButton" data-expandable-image data-image-src="imgs/anti-phish-browser-warning.png" data-image-alt="Anti-Phish AI browser warning showing blocked navigation, detection reasons, and options to open the dashboard or go back">
+                                <img src="imgs/anti-phish-browser-warning.png" alt="Anti-Phish AI browser warning showing blocked navigation, detection reasons, and options to open the dashboard or go back" loading="lazy" width="1090" height="484">
+                            </button>
+                            <figcaption><strong>Protection in the browsing workflow.</strong> The warning page explains why a demonstration phishing URL was blocked and provides a route back to safety. Dissertation Figure 21.</figcaption>
+                        </figure>
+                        <figure class="projectGalleryItem">
+                            <button type="button" class="projectImageButton" data-expandable-image data-image-src="imgs/anti-phish-dashboard.png" data-image-alt="Anti-Phish AI scan dashboard displaying the overall verdict alongside VirusTotal findings and local AI explanation factors">
+                                <img src="imgs/anti-phish-dashboard.png" alt="Anti-Phish AI scan dashboard displaying the overall verdict alongside VirusTotal findings and local AI explanation factors" loading="lazy" width="1090" height="587">
+                            </button>
+                            <figcaption><strong>Evidence behind the warning.</strong> A single view brings together reputation findings and local AI explanations to support review. Dissertation Figure 24.</figcaption>
+                        </figure>
+                        <figure class="projectGalleryItem">
+                            <button type="button" class="projectImageButton" data-expandable-image data-image-src="imgs/anti-phish-research-pipeline.png" data-image-alt="Research pipeline from benign and phishing URL collection through feature preparation, six model families, and hybrid ensemble training">
+                                <img src="imgs/anti-phish-research-pipeline.png" alt="Research pipeline from benign and phishing URL collection through feature preparation, six model families, and hybrid ensemble training" loading="lazy" width="1135" height="813">
+                            </button>
+                            <figcaption><strong>From research to a working detector.</strong> The data preparation and training pipeline shows the engineering behind the prototype. Dissertation Figure 3.</figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </li>
         <li>
             <strong class="expandableHeader">SecureFlow: End-to-End DevSecOps Security Platform</strong>
             <span class="shortDescription">Designed and secured a vulnerable cloud-native banking platform by implementing DevSecOps controls across application, infrastructure, container, Kubernetes, supply chain, secrets, and runtime monitoring layers.</span>
@@ -818,7 +875,7 @@
                 <strong class="expandableHeader">Bachelor's in Computer Science (Expected Graduation Year 2026)</strong>
                 <span class="shortDescription">University of Northampton, Northampton, United Kingdom</span>
                 <div class="expandableContent">
-                    <p>BSc Computer Science (Expected First Class, 2026). Relevant modules:</p>
+                    <p>BSc (Hons) Computer Science - First Class, 2026. Relevant modules:</p>
                     <ul>
                         <li>Data Structures and Algorithms</li>
                         <li>Modern Databases</li>
